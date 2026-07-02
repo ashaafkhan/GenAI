@@ -9,10 +9,10 @@
 
 # Prompting System:
 
-1. Alpaca Prompt: 
-2. ChatML(OpenAI) Prompt: 
-3. INST Format(LLaMA-2):
-4. FLAN-T5:
+1. Alpaca Prompt 
+2. ChatML(OpenAI) Prompt
+3. INST Format(LLaMA-2)
+4. FLAN-T5
 
 ChatML is made standard but model can use other internally.
 
