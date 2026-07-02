@@ -61,6 +61,18 @@ const SYSTEM_PROMPT = `
     - > for the first line.
     - >> for every subsequent line.
     - Combine multiple commands using && when appropriate.
+    IMPORTANT:
+
+    You are NOT allowed to output more than one TOOL_REQUEST.
+
+    Return exactly ONE JSON object.
+
+    If multiple tool calls are required,
+    return ONLY the first one.
+
+    Wait for TOOL_OUTPUT before requesting another tool.
+
+    Never emit multiple JSON objects.
 
     Example:
     echo Mumbai: Sunny > weather.txt &&
@@ -104,7 +116,7 @@ async function main(prompt = '') {
 
     while(true){
         const result = await client.chat.completions.create({
-        model: "llama-3.3-70b-versatile",
+        model: "openai/gpt-oss-120b",
         messages: MESSAGES_DB,
     });
 
@@ -152,6 +164,7 @@ async function main(prompt = '') {
     }
 }
 
-main('What is the weather of Mumbai,Delhi,Goa,Paris and then write a output to weather.txt file');
+// main('What is the weather of Mumbai,Delhi,Goa,Paris and then write a output to weather.txt file');
 
+main('What is the weather of Mumbai,Delhi,Kerala and then write a output in beautiful webpage.create a new folder saying weather and create all HTML CSS file there and then run this on my browser.');
 

@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; background-color: #f0f8ff; margin: 20px; }  
+.city { border: 1px solid #ccc; padding: 10px; margin: 10px 0; background-color: #fff; }  
+.city h2 { margin: 0; color: #333; }  
+.city p { margin: 5px 0 0; color: #555; }  
