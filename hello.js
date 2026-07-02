@@ -1,0 +1,15 @@
+import 'dotenv/config'; 
+import { OpenAI } from 'openai'
+
+const apiKey = process.env.OPENAI_API_KEY;
+
+const client = new OpenAI({
+    apiKey,
+});
+
+client.chat.completions.create({
+    model: 'gpt-4',
+    messages: [{ role: 'user', content: 'Hello, How to manage your diet?' }]
+}).then(response => {
+    console.log(response.choices[0].message.content);
+});
