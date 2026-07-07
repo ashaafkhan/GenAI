@@ -12,7 +12,7 @@ It started as a minimal OpenAI demo and then grew into a set of prompt examples 
 - `prompting/02_few_shot.js` shows few-shot prompting.
 - `prompting/03_cot.js` shows chain-of-thought style prompting.
 - `prompting/04_cot_tools.js` shows tool use, weather lookup, and command execution.
-- `.env.example` documents the environment variables the repo expects.
+- `.env.example` documents the environment variables the repo expects: `OPENAI_API_KEY`, `GROQ_API_KEY`, and `ANTHROPIC_API_KEY`.
 
 
 
