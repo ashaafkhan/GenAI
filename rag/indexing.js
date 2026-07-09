@@ -9,7 +9,7 @@ import {QdrantVectorStore} from '@langchain/qdrant';
 async function generateVectorEmbeddingsForFile(filepath) {
     //Load the PDF content as document
     const loader = new PDFLoader(filepath);
-    const documents = await loader.load(); //already changes data page by paeg
+    const documents = await loader.load(); //already changes data page by page
 
     //Initalize the embedding model
     const embeddings = new GoogleGenerativeAIEmbeddings({
@@ -32,5 +32,6 @@ async function generateVectorEmbeddingsForFile(filepath) {
     console.log(`All the document are indexed.....`)
 }
 
-generateVectorEmbeddingsForFile('nlp.pdf');
+// generateVectorEmbeddingsForFile('nlp.pdf');
+generateVectorEmbeddingsForFile('environment.pdf');
 
